@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "test-app",
+  "displayName": "Test Application",
+  "description": "Simple test app for WebShellLoader",
+  "entrypoint": "index.html",
+  "window": {
+    "type": "widget",
+    "width": 400,
+    "height": 300,
+    "blur": false
+  },
+  "permissions": {
+    "calendar": {
+      "read": true,
+      "write": false
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://webshell.dev/schemas/manifest/v1.json",
+  "version": "1.0.0",
+  "name": "hello-world",
+  "entrypoint": "index.html"
+}

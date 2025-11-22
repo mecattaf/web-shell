@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test App - WebShell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            opacity: 0.9;
+        }
+
+        .info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .value {
+            font-weight: 400;
+        }
+
+        .button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✓ Test App Loaded</h1>
+        <p>This app was successfully loaded by WebShellLoader</p>
+
+        <div class="info">
+            <div class="info-item">
+                <span class="label">App Name:</span>
+                <span class="value" id="appName">test-app</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Version:</span>
+                <span class="value">1.0.0</span>
+            </div>
+            <div class="info-item">
+                <span class="label">User Agent:</span>
+                <span class="value" id="userAgent">Loading...</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Timestamp:</span>
+                <span class="value" id="timestamp">Loading...</span>
+            </div>
+        </div>
+
+        <button class="button" onclick="testPermission()">Test Calendar Permission</button>
+
+        <div class="status" id="status">
+            Ready. Click button to test permissions.
+        </div>
+    </div>
+
+    <script>
+        // Update timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Update user agent
+        document.getElementById('userAgent').textContent = navigator.userAgent.includes('WebShell')
+            ? 'WebShell (detected)'
+            : 'Unknown';
+
+        // Log to console
+        console.log('Test app initialized');
+        console.log('User agent:', navigator.userAgent);
+        console.log('Window size:', window.innerWidth, 'x', window.innerHeight);
+
+        // Test permission function
+        function testPermission() {
+            const status = document.getElementById('status');
+            status.textContent = 'Calendar permission: READ (from manifest)';
+            console.log('Permission test executed');
+
+            // This would normally interact with the WebShell bridge
+            // For now, just show that the app is working
+        }
+
+        // Report successful load
+        console.log('✓ Test app successfully loaded and running');
+        console.log('✓ WebShellLoader integration working');
+    </script>
+</body>
+</html>

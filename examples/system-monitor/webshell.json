@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "name": "system-monitor",
+  "displayName": "System Monitor",
+  "description": "Dashboard showing system resources and battery status",
+  "entrypoint": "index.html",
+  "icon": "icon.svg",
+
+  "permissions": {
+    "system": {
+      "read": true
+    },
+    "power": {
+      "read": true
+    },
+    "clipboard": {
+      "read": true,
+      "write": true
+    }
+  },
+
+  "window": {
+    "type": "widget",
+    "width": 800,
+    "height": 600,
+    "minWidth": 600,
+    "minHeight": 400,
+    "blur": true,
+    "transparency": true,
+    "position": "center"
+  },
+
+  "devServer": "http://localhost:5173"
+}

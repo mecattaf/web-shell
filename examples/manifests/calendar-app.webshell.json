@@ -1,0 +1,78 @@
+{
+  "$schema": "https://webshell.dev/schemas/manifest/v1.json",
+  "version": "1.0.0",
+  "name": "calendar",
+  "displayName": "Calendar",
+  "description": "Weekly calendar view with event management and notifications",
+  "author": "WebShell Team <team@webshell.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/webshell/calendar-app",
+  "keywords": ["calendar", "productivity", "scheduling", "events"],
+
+  "entrypoint": "index.html",
+  "icon": "icon.svg",
+
+  "permissions": {
+    "calendar": {
+      "read": true,
+      "write": true,
+      "delete": true
+    },
+    "notifications": {
+      "send": true
+    },
+    "filesystem": {
+      "read": ["~/.config/calendar"],
+      "write": ["~/.config/calendar"]
+    },
+    "network": {
+      "allowed_hosts": ["localhost"],
+      "websockets": false
+    }
+  },
+
+  "window": {
+    "type": "widget",
+    "width": 800,
+    "height": 600,
+    "minWidth": 400,
+    "minHeight": 300,
+    "resizable": true,
+    "blur": true,
+    "transparency": true,
+    "position": "center",
+    "title": "Calendar"
+  },
+
+  "theme": {
+    "inherit": true,
+    "overrides": {
+      "--primary-color": "#3b82f6",
+      "--accent-color": "#60a5fa"
+    }
+  },
+
+  "dependencies": {
+    "go_services": ["CalendarService"],
+    "qml_services": [],
+    "webshell_version": "1.0.0"
+  },
+
+  "hooks": {
+    "onStartup": "scripts/sync-events.js",
+    "onShutdown": "scripts/save-state.js"
+  },
+
+  "shortcuts": [
+    {
+      "key": "Ctrl+Alt+C",
+      "action": "toggle",
+      "description": "Toggle calendar visibility"
+    },
+    {
+      "key": "Ctrl+N",
+      "action": "open",
+      "description": "Open calendar and focus new event"
+    }
+  ]
+}

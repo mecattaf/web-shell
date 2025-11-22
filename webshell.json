@@ -1,0 +1,34 @@
+{
+  "name": "web-shell",
+  "version": "1.0.0",
+  "description": "WebShell - Desktop shell with web technologies",
+  "author": "WebShell Team",
+  "entrypoint": "index.html",
+  "devServer": "http://localhost:5173",
+  "devMode": {
+    "hotReload": true,
+    "watchPaths": [
+      "src/**/*",
+      "public/**/*",
+      "index.html",
+      "test.html"
+    ],
+    "ignorePaths": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**",
+      "**/*.test.ts",
+      "**/*.test.tsx"
+    ]
+  },
+  "permissions": {
+    "api": []
+  },
+  "window": {
+    "width": 1280,
+    "height": 720,
+    "title": "Web Shell",
+    "resizable": true,
+    "transparent": true
+  }
+}

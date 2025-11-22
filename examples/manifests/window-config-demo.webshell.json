@@ -1,0 +1,37 @@
+{
+  "name": "Window Configuration Demo",
+  "version": "1.0.0",
+  "description": "Demonstrates various window configuration options",
+  "author": "WebShell Team",
+  "main": "index.html",
+  "permissions": {
+    "system": []
+  },
+  "window": {
+    "type": "widget",
+    "width": 1024,
+    "height": 768,
+    "minWidth": 640,
+    "minHeight": 480,
+    "maxWidth": 1920,
+    "maxHeight": 1080,
+    "position": "center",
+    "resizable": true,
+    "movable": true,
+    "blur": true,
+    "blurRadius": 20,
+    "transparency": true,
+    "opacity": 0.95,
+    "margins": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    }
+  },
+  "theme": {
+    "primaryColor": "#3498db",
+    "backgroundColor": "rgba(26, 26, 26, 0.85)",
+    "textColor": "#ecf0f1"
+  }
+}

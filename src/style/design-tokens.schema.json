@@ -1,0 +1,701 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://webshell.dev/schemas/design-tokens.schema.json",
+  "title": "WebShell Design Tokens",
+  "description": "JSON schema for WebShell design tokens. This schema defines the structure for colors, spacing, typography, elevation, border, and animation tokens used throughout the application.",
+  "type": "object",
+  "required": ["version", "colors", "spacing", "typography"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to the JSON schema definition"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the design token schema (e.g., '1.0.0')"
+    },
+    "colors": {
+      "type": "object",
+      "description": "Color tokens organized by semantic roles",
+      "additionalProperties": false,
+      "properties": {
+        "surface": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Default surface background color"
+        },
+        "surface-high": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Elevated surface color (e.g., panels, cards)"
+        },
+        "surface-highest": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Highest elevation surface color (e.g., dialogs, tooltips)"
+        },
+        "surface-low": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Lower surface color (e.g., recessed areas)"
+        },
+        "primary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Primary brand color for key actions and highlights"
+        },
+        "primary-hover": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Primary color hover state"
+        },
+        "primary-active": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Primary color active/pressed state"
+        },
+        "on-primary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on primary background"
+        },
+        "primary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Primary container color (filled buttons, chips)"
+        },
+        "on-primary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on primary container"
+        },
+        "secondary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Secondary accent color"
+        },
+        "secondary-hover": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Secondary color hover state"
+        },
+        "secondary-active": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Secondary color active/pressed state"
+        },
+        "on-secondary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on secondary background"
+        },
+        "secondary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Secondary container color"
+        },
+        "on-secondary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on secondary container"
+        },
+        "tertiary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Tertiary accent color"
+        },
+        "on-tertiary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on tertiary background"
+        },
+        "tertiary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Tertiary container color"
+        },
+        "on-tertiary-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on tertiary container"
+        },
+        "text": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Default text color"
+        },
+        "text-secondary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Secondary/muted text color"
+        },
+        "text-disabled": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Disabled text color"
+        },
+        "text-inverse": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Inverse text color for dark backgrounds"
+        },
+        "border": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Default border color"
+        },
+        "border-focus": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Border color for focused elements"
+        },
+        "border-hover": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Border color on hover"
+        },
+        "error": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Error state color"
+        },
+        "on-error": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on error background"
+        },
+        "error-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Error container color"
+        },
+        "on-error-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on error container"
+        },
+        "warning": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Warning state color"
+        },
+        "on-warning": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on warning background"
+        },
+        "warning-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Warning container color"
+        },
+        "on-warning-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on warning container"
+        },
+        "success": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Success state color"
+        },
+        "on-success": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on success background"
+        },
+        "success-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Success container color"
+        },
+        "on-success-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on success container"
+        },
+        "info": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Info state color"
+        },
+        "on-info": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on info background"
+        },
+        "info-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Info container color"
+        },
+        "on-info-container": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on info container"
+        },
+        "background": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Background color for the application"
+        },
+        "on-background": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on background"
+        },
+        "outline": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Outline/border color for components"
+        },
+        "outline-variant": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Variant outline color for subtle borders"
+        },
+        "inverse-surface": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Inverse surface color (e.g., tooltips, snackbars)"
+        },
+        "inverse-on-surface": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Text/icon color to use on inverse surface"
+        },
+        "inverse-primary": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Inverse primary color"
+        },
+        "scrim": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Scrim color for overlays and modals"
+        },
+        "shadow": {
+          "$ref": "#/definitions/colorToken",
+          "description": "Shadow color"
+        }
+      },
+      "required": [
+        "surface",
+        "surface-high",
+        "primary",
+        "on-primary",
+        "text",
+        "border",
+        "error"
+      ]
+    },
+    "spacing": {
+      "type": "object",
+      "description": "Spacing scale tokens for consistent layout",
+      "additionalProperties": false,
+      "properties": {
+        "xs": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Extra small spacing (4px)"
+        },
+        "s": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Small spacing (8px)"
+        },
+        "m": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Medium spacing (16px)"
+        },
+        "l": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Large spacing (24px)"
+        },
+        "xl": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Extra large spacing (32px)"
+        },
+        "xxl": {
+          "$ref": "#/definitions/spacingToken",
+          "description": "Extra extra large spacing (48px)"
+        }
+      },
+      "required": ["xs", "s", "m", "l", "xl"]
+    },
+    "typography": {
+      "type": "object",
+      "description": "Typography tokens for fonts, sizes, weights, and line heights",
+      "additionalProperties": false,
+      "properties": {
+        "fontFamily": {
+          "type": "object",
+          "description": "Font family tokens",
+          "additionalProperties": false,
+          "properties": {
+            "base": {
+              "$ref": "#/definitions/fontFamilyToken",
+              "description": "Base font family for body text"
+            },
+            "heading": {
+              "$ref": "#/definitions/fontFamilyToken",
+              "description": "Font family for headings"
+            },
+            "monospace": {
+              "$ref": "#/definitions/fontFamilyToken",
+              "description": "Monospace font family for code"
+            }
+          },
+          "required": ["base", "monospace"]
+        },
+        "fontSize": {
+          "type": "object",
+          "description": "Font size tokens",
+          "additionalProperties": false,
+          "properties": {
+            "xs": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Extra small font size (12px)"
+            },
+            "s": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Small font size (14px)"
+            },
+            "m": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Medium/base font size (16px)"
+            },
+            "l": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Large font size (18px)"
+            },
+            "xl": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Extra large font size (20px)"
+            },
+            "xxl": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Extra extra large font size (24px)"
+            },
+            "xxxl": {
+              "$ref": "#/definitions/fontSizeToken",
+              "description": "Extra extra extra large font size (32px)"
+            }
+          },
+          "required": ["xs", "s", "m", "l"]
+        },
+        "fontWeight": {
+          "type": "object",
+          "description": "Font weight tokens",
+          "additionalProperties": false,
+          "properties": {
+            "normal": {
+              "$ref": "#/definitions/fontWeightToken",
+              "description": "Normal font weight (400)"
+            },
+            "medium": {
+              "$ref": "#/definitions/fontWeightToken",
+              "description": "Medium font weight (500)"
+            },
+            "semibold": {
+              "$ref": "#/definitions/fontWeightToken",
+              "description": "Semibold font weight (600)"
+            },
+            "bold": {
+              "$ref": "#/definitions/fontWeightToken",
+              "description": "Bold font weight (700)"
+            }
+          },
+          "required": ["normal", "medium", "bold"]
+        },
+        "lineHeight": {
+          "type": "object",
+          "description": "Line height tokens",
+          "additionalProperties": false,
+          "properties": {
+            "tight": {
+              "$ref": "#/definitions/lineHeightToken",
+              "description": "Tight line height (1.2)"
+            },
+            "normal": {
+              "$ref": "#/definitions/lineHeightToken",
+              "description": "Normal line height (1.5)"
+            },
+            "relaxed": {
+              "$ref": "#/definitions/lineHeightToken",
+              "description": "Relaxed line height (1.75)"
+            }
+          },
+          "required": ["normal"]
+        }
+      },
+      "required": ["fontFamily", "fontSize", "fontWeight", "lineHeight"]
+    },
+    "elevation": {
+      "type": "object",
+      "description": "Elevation tokens for shadows and depth",
+      "additionalProperties": false,
+      "properties": {
+        "none": {
+          "$ref": "#/definitions/elevationToken",
+          "description": "No elevation"
+        },
+        "low": {
+          "$ref": "#/definitions/elevationToken",
+          "description": "Low elevation (subtle shadow)"
+        },
+        "medium": {
+          "$ref": "#/definitions/elevationToken",
+          "description": "Medium elevation"
+        },
+        "high": {
+          "$ref": "#/definitions/elevationToken",
+          "description": "High elevation (prominent shadow)"
+        }
+      },
+      "required": ["none", "low", "medium", "high"]
+    },
+    "border": {
+      "type": "object",
+      "description": "Border tokens for radii and widths",
+      "additionalProperties": false,
+      "properties": {
+        "radius": {
+          "type": "object",
+          "description": "Border radius tokens",
+          "additionalProperties": false,
+          "properties": {
+            "none": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "No border radius (sharp corners)"
+            },
+            "s": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "Small border radius (4px)"
+            },
+            "m": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "Medium border radius (8px)"
+            },
+            "l": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "Large border radius (12px)"
+            },
+            "xl": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "Extra large border radius (16px)"
+            },
+            "full": {
+              "$ref": "#/definitions/borderRadiusToken",
+              "description": "Full border radius (circular)"
+            }
+          },
+          "required": ["none", "s", "m", "l"]
+        },
+        "width": {
+          "type": "object",
+          "description": "Border width tokens",
+          "additionalProperties": false,
+          "properties": {
+            "thin": {
+              "$ref": "#/definitions/borderWidthToken",
+              "description": "Thin border (1px)"
+            },
+            "medium": {
+              "$ref": "#/definitions/borderWidthToken",
+              "description": "Medium border (2px)"
+            },
+            "thick": {
+              "$ref": "#/definitions/borderWidthToken",
+              "description": "Thick border (4px)"
+            }
+          },
+          "required": ["thin"]
+        }
+      },
+      "required": ["radius", "width"]
+    },
+    "animation": {
+      "type": "object",
+      "description": "Animation tokens for timing and easing",
+      "additionalProperties": false,
+      "properties": {
+        "duration": {
+          "type": "object",
+          "description": "Animation duration tokens",
+          "additionalProperties": false,
+          "properties": {
+            "fast": {
+              "$ref": "#/definitions/durationToken",
+              "description": "Fast animation (150ms)"
+            },
+            "normal": {
+              "$ref": "#/definitions/durationToken",
+              "description": "Normal animation (250ms)"
+            },
+            "slow": {
+              "$ref": "#/definitions/durationToken",
+              "description": "Slow animation (400ms)"
+            }
+          },
+          "required": ["fast", "normal"]
+        },
+        "easing": {
+          "type": "object",
+          "description": "Animation easing function tokens",
+          "additionalProperties": false,
+          "properties": {
+            "standard": {
+              "$ref": "#/definitions/easingToken",
+              "description": "Standard easing (ease-in-out)"
+            },
+            "decelerate": {
+              "$ref": "#/definitions/easingToken",
+              "description": "Deceleration easing (ease-out)"
+            },
+            "accelerate": {
+              "$ref": "#/definitions/easingToken",
+              "description": "Acceleration easing (ease-in)"
+            }
+          },
+          "required": ["standard"]
+        }
+      },
+      "required": ["duration", "easing"]
+    }
+  },
+  "definitions": {
+    "colorToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$",
+          "description": "Hex color value (e.g., '#1a1a1a' or '#1a1a1aff')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the color's purpose"
+        }
+      }
+    },
+    "spacingToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+px$",
+          "description": "Spacing value in pixels (e.g., '16px')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the spacing usage"
+        }
+      }
+    },
+    "fontFamilyToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Font family stack (e.g., 'system-ui, -apple-system, sans-serif')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the font family usage"
+        }
+      }
+    },
+    "fontSizeToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+px$",
+          "description": "Font size value in pixels (e.g., '16px')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the font size usage"
+        }
+      }
+    },
+    "fontWeightToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 100,
+              "maximum": 900,
+              "multipleOf": 100
+            },
+            {
+              "type": "string",
+              "enum": ["normal", "bold"]
+            }
+          ],
+          "description": "Font weight value (100-900 or 'normal'/'bold')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the font weight usage"
+        }
+      }
+    },
+    "lineHeightToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Line height as a unitless multiplier (e.g., 1.5)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the line height usage"
+        }
+      }
+    },
+    "elevationToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "CSS box-shadow value (e.g., '0 2px 4px rgba(0,0,0,0.1)')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the elevation level"
+        }
+      }
+    },
+    "borderRadiusToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^(\\d+px|\\d+%|9999px)$",
+          "description": "Border radius value (e.g., '8px' or '50%')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the border radius usage"
+        }
+      }
+    },
+    "borderWidthToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+px$",
+          "description": "Border width value in pixels (e.g., '1px')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the border width usage"
+        }
+      }
+    },
+    "durationToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^\\d+ms$",
+          "description": "Duration value in milliseconds (e.g., '250ms')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the duration usage"
+        }
+      }
+    },
+    "easingToken": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "CSS easing function (e.g., 'ease-in-out' or 'cubic-bezier(0.4, 0, 0.2, 1)')"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the easing function usage"
+        }
+      }
+    }
+  }
+}

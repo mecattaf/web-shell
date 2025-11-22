@@ -1,0 +1,313 @@
+<div class="page-header">
+  <h1 class="ws-heading ws-heading--h1 page-title">Containers & Layouts</h1>
+  <p class="ws-text page-description">
+    Layout primitives and container components for structuring WebShell applications.
+  </p>
+</div>
+
+<!-- Stack Layout -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Stack</h2>
+    <p class="section-description">
+      Flexbox-based stacking layout for vertical or horizontal arrangements.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Vertical Stack</h3>
+    <div class="layout-preview">
+      <div class="ws-stack" style="width: 300px;">
+        <button class="ws-button ws-button--primary">Item 1</button>
+        <button class="ws-button ws-button--primary">Item 2</button>
+        <button class="ws-button ws-button--primary">Item 3</button>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-stack"&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 1&lt;/button&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 2&lt;/button&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Horizontal Stack</h3>
+    <div class="layout-preview">
+      <div class="ws-stack ws-stack--horizontal">
+        <button class="ws-button ws-button--primary">Item 1</button>
+        <button class="ws-button ws-button--primary">Item 2</button>
+        <button class="ws-button ws-button--primary">Item 3</button>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-stack ws-stack--horizontal"&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 1&lt;/button&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 2&lt;/button&gt;
+  &lt;button class="ws-button ws-button--primary"&gt;Item 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Stack with Spacing Variations</h3>
+    <div class="layout-preview">
+      <div class="ws-stack ws-stack--horizontal ws-stack--gap-xs">
+        <button class="ws-button ws-button--small">Gap XS</button>
+        <button class="ws-button ws-button--small">Gap XS</button>
+        <button class="ws-button ws-button--small">Gap XS</button>
+      </div>
+      <div class="ws-stack ws-stack--horizontal ws-stack--gap-l" style="margin-top: 16px;">
+        <button class="ws-button ws-button--small">Gap L</button>
+        <button class="ws-button ws-button--small">Gap L</button>
+        <button class="ws-button ws-button--small">Gap L</button>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-stack ws-stack--horizontal ws-stack--gap-xs"&gt;...&lt;/div&gt;
+&lt;div class="ws-stack ws-stack--horizontal ws-stack--gap-l"&gt;...&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Grid Layout -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Grid</h2>
+    <p class="section-description">
+      CSS Grid-based layout for multi-column arrangements.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">2-Column Grid</h3>
+    <div class="layout-preview">
+      <div class="ws-grid ws-grid--cols-2" style="width: 100%;">
+        <div class="ws-card">Grid Item 1</div>
+        <div class="ws-card">Grid Item 2</div>
+        <div class="ws-card">Grid Item 3</div>
+        <div class="ws-card">Grid Item 4</div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-grid ws-grid--cols-2"&gt;
+  &lt;div class="ws-card"&gt;Grid Item 1&lt;/div&gt;
+  &lt;div class="ws-card"&gt;Grid Item 2&lt;/div&gt;
+  &lt;div class="ws-card"&gt;Grid Item 3&lt;/div&gt;
+  &lt;div class="ws-card"&gt;Grid Item 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">3-Column Grid</h3>
+    <div class="layout-preview">
+      <div class="ws-grid ws-grid--cols-3" style="width: 100%;">
+        <div class="ws-card">Item 1</div>
+        <div class="ws-card">Item 2</div>
+        <div class="ws-card">Item 3</div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-grid ws-grid--cols-3"&gt;
+  &lt;div class="ws-card"&gt;Item 1&lt;/div&gt;
+  &lt;div class="ws-card"&gt;Item 2&lt;/div&gt;
+  &lt;div class="ws-card"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Panel -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Panel</h2>
+    <p class="section-description">
+      Container with background, padding, and elevation.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Panel Container</h3>
+    <div class="layout-preview">
+      <div class="ws-panel" style="width: 400px;">
+        <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 12px;">Panel Title</h3>
+        <p class="ws-text ws-text--size-s">This is a panel container with padding, background, and shadow.</p>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-panel"&gt;
+  &lt;h3 class="ws-heading ws-heading--h4"&gt;Panel Title&lt;/h3&gt;
+  &lt;p class="ws-text"&gt;Panel content...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Panel Elevation Variants</h3>
+    <div class="layout-preview" style="flex-direction: column; align-items: flex-start;">
+      <div class="ws-panel ws-panel--elevation-none" style="width: 300px; margin-bottom: 16px;">
+        <p class="ws-text ws-text--size-s">Panel with no elevation</p>
+      </div>
+      <div class="ws-panel ws-panel--elevation-low" style="width: 300px; margin-bottom: 16px;">
+        <p class="ws-text ws-text--size-s">Panel with low elevation</p>
+      </div>
+      <div class="ws-panel ws-panel--elevation-high" style="width: 300px;">
+        <p class="ws-text ws-text--size-s">Panel with high elevation</p>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-panel ws-panel--elevation-none"&gt;...&lt;/div&gt;
+&lt;div class="ws-panel ws-panel--elevation-low"&gt;...&lt;/div&gt;
+&lt;div class="ws-panel ws-panel--elevation-high"&gt;...&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Surface -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Surface</h2>
+    <p class="section-description">
+      Basic surface containers with different background levels.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Surface Variants</h3>
+    <div class="layout-preview" style="flex-direction: column; align-items: stretch; width: 100%;">
+      <div class="ws-surface" style="margin-bottom: 8px;">
+        <p class="ws-text ws-text--size-s">Default Surface</p>
+      </div>
+      <div class="ws-surface ws-surface--high" style="margin-bottom: 8px;">
+        <p class="ws-text ws-text--size-s">Surface High</p>
+      </div>
+      <div class="ws-surface ws-surface--highest" style="margin-bottom: 8px;">
+        <p class="ws-text ws-text--size-s">Surface Highest</p>
+      </div>
+      <div class="ws-surface ws-surface--low">
+        <p class="ws-text ws-text--size-s">Surface Low</p>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-surface"&gt;Default Surface&lt;/div&gt;
+&lt;div class="ws-surface ws-surface--high"&gt;Surface High&lt;/div&gt;
+&lt;div class="ws-surface ws-surface--highest"&gt;Surface Highest&lt;/div&gt;
+&lt;div class="ws-surface ws-surface--low"&gt;Surface Low&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Widget -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Widget</h2>
+    <p class="section-description">
+      Shell-specific widget container for desktop widgets and panels.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Widget Container</h3>
+    <div class="layout-preview">
+      <div class="ws-widget" style="width: 300px;">
+        <h3 class="ws-heading ws-heading--h5" style="margin-bottom: 12px;">System Monitor</h3>
+        <div class="ws-stack ws-stack--gap-s">
+          <div class="ws-text ws-text--size-s">CPU: 45%</div>
+          <div class="ws-text ws-text--size-s">RAM: 8.2 GB / 16 GB</div>
+          <div class="ws-text ws-text--size-s">Disk: 234 GB / 512 GB</div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-widget"&gt;
+  &lt;h3 class="ws-heading ws-heading--h5"&gt;System Monitor&lt;/h3&gt;
+  &lt;div class="ws-stack ws-stack--gap-s"&gt;
+    &lt;div class="ws-text ws-text--size-s"&gt;CPU: 45%&lt;/div&gt;
+    &lt;div class="ws-text ws-text--size-s"&gt;RAM: 8.2 GB / 16 GB&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Overlay -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Overlay</h2>
+    <p class="section-description">
+      Full-screen overlay container for modals and dialogs.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <h3 class="ws-heading ws-heading--h4 layout-demo-title">Overlay Example</h3>
+    <div class="layout-preview">
+      <div style="position: relative; width: 400px; height: 300px; background: var(--color-surface-low); border-radius: var(--radius-m); overflow: hidden;">
+        <div class="ws-overlay" style="position: absolute;">
+          <div class="ws-panel" style="max-width: 400px;">
+            <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 12px;">Dialog Title</h3>
+            <p class="ws-text ws-text--size-s" style="margin-bottom: 16px;">This is a dialog displayed over an overlay.</p>
+            <div class="ws-stack ws-stack--horizontal ws-stack--gap-s ws-stack--justify-end">
+              <button class="ws-button ws-button--ghost">Cancel</button>
+              <button class="ws-button ws-button--primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-overlay"&gt;
+  &lt;div class="ws-panel"&gt;
+    &lt;h3 class="ws-heading ws-heading--h4"&gt;Dialog Title&lt;/h3&gt;
+    &lt;p class="ws-text"&gt;Dialog content...&lt;/p&gt;
+    &lt;div class="ws-stack ws-stack--horizontal"&gt;
+      &lt;button class="ws-button ws-button--ghost"&gt;Cancel&lt;/button&gt;
+      &lt;button class="ws-button ws-button--primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>

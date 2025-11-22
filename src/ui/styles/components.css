@@ -1,0 +1,450 @@
+/**
+ * WebShell UI Components - Base Styles
+ *
+ * Minimal, unopinionated component library using design tokens
+ * Compatible with QtWebEngine
+ */
+
+/* ========================================
+ * Layout Components
+ * ======================================== */
+
+.ws-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.ws-stack--horizontal {
+  flex-direction: row;
+}
+
+.ws-stack--gap-xs { gap: var(--space-xs); }
+.ws-stack--gap-s { gap: var(--space-s); }
+.ws-stack--gap-m { gap: var(--space-m); }
+.ws-stack--gap-l { gap: var(--space-l); }
+.ws-stack--gap-xl { gap: var(--space-xl); }
+
+.ws-stack--align-start { align-items: flex-start; }
+.ws-stack--align-center { align-items: center; }
+.ws-stack--align-end { align-items: flex-end; }
+.ws-stack--align-stretch { align-items: stretch; }
+
+.ws-stack--justify-start { justify-content: flex-start; }
+.ws-stack--justify-center { justify-content: center; }
+.ws-stack--justify-end { justify-content: flex-end; }
+.ws-stack--justify-between { justify-content: space-between; }
+.ws-stack--justify-around { justify-content: space-around; }
+
+.ws-grid {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.ws-grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.ws-grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.ws-grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
+.ws-grid--gap-xs { gap: var(--space-xs); }
+.ws-grid--gap-s { gap: var(--space-s); }
+.ws-grid--gap-m { gap: var(--space-m); }
+.ws-grid--gap-l { gap: var(--space-l); }
+
+.ws-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-l);
+  padding: var(--space-m);
+  box-shadow: var(--elevation-medium);
+}
+
+.ws-panel--elevation-none { box-shadow: var(--elevation-none); }
+.ws-panel--elevation-low { box-shadow: var(--elevation-low); }
+.ws-panel--elevation-medium { box-shadow: var(--elevation-medium); }
+.ws-panel--elevation-high { box-shadow: var(--elevation-high); }
+
+.ws-surface {
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: var(--space-m);
+}
+
+.ws-surface--high {
+  background: var(--color-surface-high);
+}
+
+.ws-surface--highest {
+  background: var(--color-surface-highest);
+}
+
+.ws-surface--low {
+  background: var(--color-surface-low);
+}
+
+/* ========================================
+ * Typography Components
+ * ======================================== */
+
+.ws-text {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+.ws-text--size-xs { font-size: var(--font-size-xs); }
+.ws-text--size-s { font-size: var(--font-size-s); }
+.ws-text--size-m { font-size: var(--font-size-m); }
+.ws-text--size-l { font-size: var(--font-size-l); }
+.ws-text--size-xl { font-size: var(--font-size-xl); }
+
+.ws-text--weight-normal { font-weight: var(--font-weight-normal); }
+.ws-text--weight-medium { font-weight: var(--font-weight-medium); }
+.ws-text--weight-semibold { font-weight: var(--font-weight-semibold); }
+.ws-text--weight-bold { font-weight: var(--font-weight-bold); }
+
+.ws-text--secondary {
+  color: var(--color-text-secondary);
+}
+
+.ws-text--monospace {
+  font-family: var(--font-monospace);
+}
+
+.ws-heading {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.ws-heading--h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+}
+
+.ws-heading--h2 {
+  font-size: var(--font-size-xxl);
+}
+
+.ws-heading--h3 {
+  font-size: var(--font-size-xl);
+}
+
+.ws-heading--h4 {
+  font-size: var(--font-size-l);
+}
+
+.ws-heading--h5 {
+  font-size: var(--font-size-m);
+}
+
+.ws-heading--h6 {
+  font-size: var(--font-size-s);
+}
+
+/* ========================================
+ * Control Components
+ * ======================================== */
+
+.ws-button {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--radius-m);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-standard);
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+}
+
+.ws-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.ws-button--primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.ws-button--primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.ws-button--secondary {
+  background: var(--color-surface-high);
+  color: var(--color-text);
+}
+
+.ws-button--secondary:hover:not(:disabled) {
+  background: var(--color-surface-highest);
+}
+
+.ws-button--ghost {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.ws-button--ghost:hover:not(:disabled) {
+  background: var(--color-surface-high);
+}
+
+.ws-button--small {
+  padding: var(--space-xs) var(--space-s);
+  font-size: var(--font-size-xs);
+}
+
+.ws-button--large {
+  padding: var(--space-m) var(--space-l);
+  font-size: var(--font-size-m);
+}
+
+.ws-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ws-input-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.ws-input {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--radius-m);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  color: var(--color-text);
+  background: var(--color-surface-high);
+  border: 1px solid var(--color-border-focus);
+  outline: none;
+  transition: all var(--duration-fast) var(--easing-standard);
+}
+
+.ws-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+.ws-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(239, 131, 84, 0.2);
+}
+
+.ws-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-s);
+  cursor: pointer;
+}
+
+.ws-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-s);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface-high);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-standard);
+  position: relative;
+}
+
+.ws-checkbox:checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.ws-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--color-on-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ws-checkbox:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.ws-checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-checkbox-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  color: var(--color-text);
+  user-select: none;
+}
+
+.ws-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ws-select-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.ws-select {
+  padding: var(--space-s) var(--space-m);
+  border-radius: var(--radius-m);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+  color: var(--color-text);
+  background: var(--color-surface-high);
+  border: 1px solid var(--color-border-focus);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-standard);
+}
+
+.ws-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(239, 131, 84, 0.2);
+}
+
+.ws-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-select option {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* ========================================
+ * Feedback Components
+ * ======================================== */
+
+.ws-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-m);
+  padding: var(--space-m);
+  box-shadow: var(--elevation-low);
+  border: 1px solid var(--color-border-focus);
+}
+
+.ws-card--interactive {
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-standard);
+}
+
+.ws-card--interactive:hover {
+  box-shadow: var(--elevation-medium);
+  transform: translateY(-2px);
+}
+
+.ws-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ws-list-item {
+  padding: var(--space-s) var(--space-m);
+  border-bottom: 1px solid var(--color-border-focus);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-s);
+}
+
+.ws-list-item:last-child {
+  border-bottom: none;
+}
+
+.ws-list-item--interactive {
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-standard);
+}
+
+.ws-list-item--interactive:hover {
+  background: var(--color-surface-high);
+}
+
+.ws-divider {
+  border: none;
+  border-top: 1px solid var(--color-border-focus);
+  margin: var(--space-m) 0;
+}
+
+.ws-divider--vertical {
+  border-top: none;
+  border-left: 1px solid var(--color-border-focus);
+  margin: 0 var(--space-m);
+  height: auto;
+  align-self: stretch;
+}
+
+/* ========================================
+ * Shell-specific Primitives
+ * ======================================== */
+
+.ws-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-widget {
+  background: var(--color-surface-high);
+  box-shadow: var(--elevation-medium);
+  border-radius: var(--radius-m);
+  padding: var(--space-m);
+}
+
+/* ========================================
+ * Accessibility
+ * ======================================== */
+
+.ws-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

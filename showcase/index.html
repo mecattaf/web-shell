@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebShell Component Showcase</title>
+  <link rel="stylesheet" href="../src/style/tokens.css">
+  <link rel="stylesheet" href="../src/ui/styles/components.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="showcase-container">
+    <!-- Navigation Sidebar -->
+    <aside class="showcase-nav">
+      <div class="showcase-header">
+        <h1 class="ws-heading ws-heading--h3">WebShell</h1>
+        <p class="ws-text ws-text--size-s ws-text--secondary">Component Showcase</p>
+      </div>
+
+      <nav class="showcase-menu">
+        <a href="#tokens" class="showcase-nav-item active" data-page="tokens">
+          <span class="nav-icon">🎨</span>
+          Design Tokens
+        </a>
+        <a href="#components" class="showcase-nav-item" data-page="components">
+          <span class="nav-icon">🧩</span>
+          Components
+        </a>
+        <a href="#containers" class="showcase-nav-item" data-page="containers">
+          <span class="nav-icon">📦</span>
+          Containers
+        </a>
+        <a href="#examples" class="showcase-nav-item" data-page="examples">
+          <span class="nav-icon">✨</span>
+          Examples
+        </a>
+      </nav>
+
+      <!-- Theme Switcher -->
+      <div class="theme-switcher">
+        <label class="ws-text ws-text--size-s ws-text--weight-medium">Theme</label>
+        <div class="theme-options">
+          <button class="theme-btn active" data-theme="dark">Dark</button>
+          <button class="theme-btn" data-theme="light">Light</button>
+          <button class="theme-btn" data-theme="custom">Custom</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="showcase-content" id="content-area">
+      <!-- Content will be loaded dynamically -->
+      <div class="loading-placeholder">
+        <p class="ws-text ws-text--size-l">Loading...</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

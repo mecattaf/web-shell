@@ -1,0 +1,334 @@
+<div class="page-header">
+  <h1 class="ws-heading ws-heading--h1 page-title">Complete Examples</h1>
+  <p class="ws-text page-description">
+    Real-world examples combining multiple components and containers to build complete UIs.
+  </p>
+</div>
+
+<!-- Login Form -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Login Form</h2>
+    <p class="section-description">
+      A complete login form using input fields, buttons, and panel container.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <div class="layout-preview">
+      <div class="ws-panel" style="width: 400px;">
+        <h2 class="ws-heading ws-heading--h2" style="margin-bottom: 24px;">Sign In</h2>
+        <div class="ws-stack ws-stack--gap-m">
+          <div class="ws-input-wrapper">
+            <label class="ws-input-label">Email</label>
+            <input type="email" class="ws-input" placeholder="you@example.com">
+          </div>
+          <div class="ws-input-wrapper">
+            <label class="ws-input-label">Password</label>
+            <input type="password" class="ws-input" placeholder="Enter your password">
+          </div>
+          <label class="ws-checkbox-wrapper">
+            <input type="checkbox" class="ws-checkbox">
+            <span class="ws-checkbox-label">Remember me</span>
+          </label>
+          <button class="ws-button ws-button--primary ws-button--large" style="width: 100%;">Sign In</button>
+          <div class="ws-stack ws-stack--horizontal ws-stack--justify-center">
+            <a href="#" class="ws-text ws-text--size-s" style="color: var(--color-primary); text-decoration: none;">Forgot password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-panel"&gt;
+  &lt;h2 class="ws-heading ws-heading--h2"&gt;Sign In&lt;/h2&gt;
+  &lt;div class="ws-stack ws-stack--gap-m"&gt;
+    &lt;div class="ws-input-wrapper"&gt;
+      &lt;label class="ws-input-label"&gt;Email&lt;/label&gt;
+      &lt;input type="email" class="ws-input" placeholder="you@example.com"&gt;
+    &lt;/div&gt;
+    &lt;div class="ws-input-wrapper"&gt;
+      &lt;label class="ws-input-label"&gt;Password&lt;/label&gt;
+      &lt;input type="password" class="ws-input" placeholder="Enter your password"&gt;
+    &lt;/div&gt;
+    &lt;label class="ws-checkbox-wrapper"&gt;
+      &lt;input type="checkbox" class="ws-checkbox"&gt;
+      &lt;span class="ws-checkbox-label"&gt;Remember me&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;button class="ws-button ws-button--primary ws-button--large"&gt;Sign In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Settings Panel -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Settings Panel</h2>
+    <p class="section-description">
+      A settings panel with various form controls and sections.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <div class="layout-preview">
+      <div class="ws-panel" style="width: 500px;">
+        <h2 class="ws-heading ws-heading--h2" style="margin-bottom: 24px;">Preferences</h2>
+
+        <div class="ws-stack ws-stack--gap-l">
+          <!-- Appearance Section -->
+          <div>
+            <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 12px;">Appearance</h3>
+            <div class="ws-stack ws-stack--gap-m">
+              <div class="ws-select-wrapper">
+                <label class="ws-select-label">Theme</label>
+                <select class="ws-select">
+                  <option>Dark</option>
+                  <option>Light</option>
+                  <option>Auto</option>
+                </select>
+              </div>
+              <label class="ws-checkbox-wrapper">
+                <input type="checkbox" class="ws-checkbox" checked>
+                <span class="ws-checkbox-label">Enable animations</span>
+              </label>
+              <label class="ws-checkbox-wrapper">
+                <input type="checkbox" class="ws-checkbox">
+                <span class="ws-checkbox-label">High contrast mode</span>
+              </label>
+            </div>
+          </div>
+
+          <hr class="ws-divider">
+
+          <!-- Notifications Section -->
+          <div>
+            <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 12px;">Notifications</h3>
+            <div class="ws-stack ws-stack--gap-m">
+              <label class="ws-checkbox-wrapper">
+                <input type="checkbox" class="ws-checkbox" checked>
+                <span class="ws-checkbox-label">Desktop notifications</span>
+              </label>
+              <label class="ws-checkbox-wrapper">
+                <input type="checkbox" class="ws-checkbox" checked>
+                <span class="ws-checkbox-label">Sound alerts</span>
+              </label>
+              <label class="ws-checkbox-wrapper">
+                <input type="checkbox" class="ws-checkbox">
+                <span class="ws-checkbox-label">Email notifications</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="ws-stack ws-stack--horizontal ws-stack--gap-s ws-stack--justify-end">
+            <button class="ws-button ws-button--ghost">Cancel</button>
+            <button class="ws-button ws-button--primary">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-panel"&gt;
+  &lt;h2 class="ws-heading ws-heading--h2"&gt;Preferences&lt;/h2&gt;
+  &lt;div class="ws-stack ws-stack--gap-l"&gt;
+    &lt;div&gt;
+      &lt;h3 class="ws-heading ws-heading--h4"&gt;Appearance&lt;/h3&gt;
+      &lt;div class="ws-stack ws-stack--gap-m"&gt;
+        &lt;div class="ws-select-wrapper"&gt;
+          &lt;label class="ws-select-label"&gt;Theme&lt;/label&gt;
+          &lt;select class="ws-select"&gt;
+            &lt;option&gt;Dark&lt;/option&gt;
+            &lt;option&gt;Light&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;label class="ws-checkbox-wrapper"&gt;
+          &lt;input type="checkbox" class="ws-checkbox" checked&gt;
+          &lt;span class="ws-checkbox-label"&gt;Enable animations&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Widget Grid -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Dashboard Widget Grid</h2>
+    <p class="section-description">
+      A dashboard layout with multiple widgets in a grid.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <div class="layout-preview" style="width: 100%;">
+      <div class="ws-grid ws-grid--cols-3" style="width: 100%;">
+        <!-- Widget 1 -->
+        <div class="ws-widget">
+          <h3 class="ws-heading ws-heading--h5" style="margin-bottom: 12px;">CPU Usage</h3>
+          <p class="ws-text ws-text--size-xl ws-text--weight-bold" style="color: var(--color-primary); margin-bottom: 8px;">45%</p>
+          <p class="ws-text ws-text--size-s ws-text--secondary">4 cores active</p>
+        </div>
+
+        <!-- Widget 2 -->
+        <div class="ws-widget">
+          <h3 class="ws-heading ws-heading--h5" style="margin-bottom: 12px;">Memory</h3>
+          <p class="ws-text ws-text--size-xl ws-text--weight-bold" style="color: var(--color-secondary); margin-bottom: 8px;">8.2 GB</p>
+          <p class="ws-text ws-text--size-s ws-text--secondary">of 16 GB used</p>
+        </div>
+
+        <!-- Widget 3 -->
+        <div class="ws-widget">
+          <h3 class="ws-heading ws-heading--h5" style="margin-bottom: 12px;">Storage</h3>
+          <p class="ws-text ws-text--size-xl ws-text--weight-bold" style="color: var(--color-tertiary); margin-bottom: 8px;">234 GB</p>
+          <p class="ws-text ws-text--size-s ws-text--secondary">of 512 GB used</p>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-grid ws-grid--cols-3"&gt;
+  &lt;div class="ws-widget"&gt;
+    &lt;h3 class="ws-heading ws-heading--h5"&gt;CPU Usage&lt;/h3&gt;
+    &lt;p class="ws-text ws-text--size-xl ws-text--weight-bold"&gt;45%&lt;/p&gt;
+    &lt;p class="ws-text ws-text--size-s ws-text--secondary"&gt;4 cores active&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;!-- More widgets... --&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation Menu -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Navigation Menu</h2>
+    <p class="section-description">
+      A vertical navigation menu using lists and interactive items.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <div class="layout-preview">
+      <div class="ws-panel" style="width: 280px; padding: 0;">
+        <div style="padding: 16px; border-bottom: 1px solid var(--color-border-focus);">
+          <h3 class="ws-heading ws-heading--h4">Navigation</h3>
+        </div>
+        <ul class="ws-list">
+          <li class="ws-list-item ws-list-item--interactive" style="background: var(--color-primary-container); color: var(--color-on-primary-container);">
+            <span style="margin-right: 12px;">🏠</span> Dashboard
+          </li>
+          <li class="ws-list-item ws-list-item--interactive">
+            <span style="margin-right: 12px;">📊</span> Analytics
+          </li>
+          <li class="ws-list-item ws-list-item--interactive">
+            <span style="margin-right: 12px;">⚙️</span> Settings
+          </li>
+          <li class="ws-list-item ws-list-item--interactive">
+            <span style="margin-right: 12px;">👤</span> Profile
+          </li>
+          <li class="ws-list-item ws-list-item--interactive">
+            <span style="margin-right: 12px;">❓</span> Help
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-panel"&gt;
+  &lt;div&gt;
+    &lt;h3 class="ws-heading ws-heading--h4"&gt;Navigation&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;ul class="ws-list"&gt;
+    &lt;li class="ws-list-item ws-list-item--interactive"&gt;Dashboard&lt;/li&gt;
+    &lt;li class="ws-list-item ws-list-item--interactive"&gt;Analytics&lt;/li&gt;
+    &lt;li class="ws-list-item ws-list-item--interactive"&gt;Settings&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Card Grid -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Card Grid</h2>
+    <p class="section-description">
+      A grid of interactive cards for displaying content.
+    </p>
+  </div>
+
+  <div class="layout-demo">
+    <div class="layout-preview" style="width: 100%;">
+      <div class="ws-grid ws-grid--cols-2" style="width: 100%;">
+        <div class="ws-card ws-card--interactive">
+          <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Project Alpha</h3>
+          <p class="ws-text ws-text--size-s ws-text--secondary" style="margin-bottom: 12px;">A revolutionary new application built with WebShell.</p>
+          <div class="ws-stack ws-stack--horizontal ws-stack--gap-s">
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-primary-container); color: var(--color-on-primary-container); border-radius: 4px;">Active</span>
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-surface-high); border-radius: 4px;">3 tasks</span>
+          </div>
+        </div>
+
+        <div class="ws-card ws-card--interactive">
+          <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Project Beta</h3>
+          <p class="ws-text ws-text--size-s ws-text--secondary" style="margin-bottom: 12px;">Next-generation desktop environment components.</p>
+          <div class="ws-stack ws-stack--horizontal ws-stack--gap-s">
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-warning-container); color: var(--color-on-warning-container); border-radius: 4px;">On Hold</span>
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-surface-high); border-radius: 4px;">7 tasks</span>
+          </div>
+        </div>
+
+        <div class="ws-card ws-card--interactive">
+          <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Project Gamma</h3>
+          <p class="ws-text ws-text--size-s ws-text--secondary" style="margin-bottom: 12px;">System monitoring and analytics dashboard.</p>
+          <div class="ws-stack ws-stack--horizontal ws-stack--gap-s">
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-success-container); color: var(--color-on-success-container); border-radius: 4px;">Complete</span>
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-surface-high); border-radius: 4px;">0 tasks</span>
+          </div>
+        </div>
+
+        <div class="ws-card ws-card--interactive">
+          <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Project Delta</h3>
+          <p class="ws-text ws-text--size-s ws-text--secondary" style="margin-bottom: 12px;">Custom theme generator and previewer.</p>
+          <div class="ws-stack ws-stack--horizontal ws-stack--gap-s">
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-primary-container); color: var(--color-on-primary-container); border-radius: 4px;">Active</span>
+            <span class="ws-text ws-text--size-xs" style="padding: 4px 8px; background: var(--color-surface-high); border-radius: 4px;">5 tasks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-grid ws-grid--cols-2"&gt;
+  &lt;div class="ws-card ws-card--interactive"&gt;
+    &lt;h3 class="ws-heading ws-heading--h4"&gt;Project Alpha&lt;/h3&gt;
+    &lt;p class="ws-text ws-text--size-s ws-text--secondary"&gt;Description...&lt;/p&gt;
+    &lt;div class="ws-stack ws-stack--horizontal ws-stack--gap-s"&gt;
+      &lt;span class="ws-text ws-text--size-xs"&gt;Active&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- More cards... --&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>

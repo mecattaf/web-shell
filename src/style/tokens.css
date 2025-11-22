@@ -1,0 +1,234 @@
+/**
+ * Design System Tokens - CSS Variables
+ * 
+ * Auto-generated from design-tokens.json
+ * DO NOT EDIT MANUALLY
+ * 
+ * To regenerate: npm run generate-tokens
+ */
+
+:root {
+  /* ========================================
+   * Colors
+   * ======================================== */
+
+  /* Extracted from Appearance.colors.colSurface */
+  --color-surface: #1a1a1a;
+  /* Extracted from Appearance.colors.colSurfaceContainerHigh */
+  --color-surface-high: #2d2d2d;
+  /* Extracted from Appearance.colors.colSurfaceContainerHighest */
+  --color-surface-highest: #383838;
+  /* Extracted from Appearance.colors.colSurfaceContainerLow */
+  --color-surface-low: #1e1e1e;
+  /* Extracted from Appearance.colors.colOnSurface */
+  --color-text: #e3e3e3;
+  /* Extracted from Appearance.colors.colOnSurfaceVariant */
+  --color-text-secondary: #c7c7c7;
+  /* Extracted from Appearance.colors.colPrimary */
+  --color-primary: #ef8354;
+  /* Extracted from Appearance.colors.colOnPrimary */
+  --color-on-primary: #2d1e1a;
+  /* Extracted from Appearance.colors.colPrimaryContainer */
+  --color-primary-container: #4f3528;
+  /* Extracted from Appearance.colors.colOnPrimaryContainer */
+  --color-on-primary-container: #ffdcc8;
+  /* Extracted from Appearance.colors.colSecondary */
+  --color-secondary: #4f9d69;
+  /* Extracted from Appearance.colors.colOnSecondary */
+  --color-on-secondary: #1a2e21;
+  /* Extracted from Appearance.colors.colSecondaryContainer */
+  --color-secondary-container: #2d4936;
+  /* Extracted from Appearance.colors.colOnSecondaryContainer */
+  --color-on-secondary-container: #c8f0d9;
+  /* Extracted from Appearance.colors.colTertiary */
+  --color-tertiary: #6b9bd1;
+  /* Extracted from Appearance.colors.colOnTertiary */
+  --color-on-tertiary: #1e2f42;
+  /* Extracted from Appearance.colors.colTertiaryContainer */
+  --color-tertiary-container: #364d6b;
+  /* Extracted from Appearance.colors.colOnTertiaryContainer */
+  --color-on-tertiary-container: #d6e7ff;
+  /* Extracted from Appearance.colors.colError */
+  --color-error: #ff6b6b;
+  /* Extracted from Appearance.colors.colOnError */
+  --color-on-error: #3d1616;
+  /* Extracted from Appearance.colors.colErrorContainer */
+  --color-error-container: #5c2020;
+  /* Extracted from Appearance.colors.colOnErrorContainer */
+  --color-on-error-container: #ffd6d6;
+  /* Extracted from Appearance.colors.colWarning */
+  --color-warning: #f9c74f;
+  /* Extracted from Appearance.colors.colOnWarning */
+  --color-on-warning: #3d3318;
+  /* Extracted from Appearance.colors.colWarningContainer */
+  --color-warning-container: #5c4d24;
+  /* Extracted from Appearance.colors.colOnWarningContainer */
+  --color-on-warning-container: #fff0c8;
+  /* Extracted from Appearance.colors.colSuccess */
+  --color-success: #90be6d;
+  /* Extracted from Appearance.colors.colOnSuccess */
+  --color-on-success: #243d1e;
+  /* Extracted from Appearance.colors.colSuccessContainer */
+  --color-success-container: #375c2d;
+  /* Extracted from Appearance.colors.colOnSuccessContainer */
+  --color-on-success-container: #daf2ce;
+  /* Extracted from Appearance.colors.colInfo */
+  --color-info: #577590;
+  /* Extracted from Appearance.colors.colOnInfo */
+  --color-on-info: #1a242e;
+  /* Extracted from Appearance.colors.colInfoContainer */
+  --color-info-container: #2d3d4f;
+  /* Extracted from Appearance.colors.colOnInfoContainer */
+  --color-on-info-container: #d0dce8;
+  /* Extracted from Appearance.colors.colOutline */
+  --color-border: #8e8e8e;
+  /* Extracted from Appearance.colors.colOutlineVariant */
+  --color-border-focus: #4a4a4a;
+  /* Extracted from Appearance.colors.colBackground */
+  --color-background: #121212;
+  /* Extracted from Appearance.colors.colOnBackground */
+  --color-on-background: #e3e3e3;
+  /* Extracted from Appearance.colors.colInverseSurface */
+  --color-inverse-surface: #e3e3e3;
+  /* Extracted from Appearance.colors.colInverseOnSurface */
+  --color-inverse-on-surface: #2d2d2d;
+  /* Extracted from Appearance.colors.colInversePrimary */
+  --color-inverse-primary: #b85c2f;
+  /* Extracted from Appearance.colors.colShadow */
+  --color-shadow: #000000;
+  /* Extracted from Appearance.colors.colScrim */
+  --color-scrim: #000000;
+
+  /* ========================================
+   * Spacing
+   * ======================================== */
+
+  /* Extracted from Appearance.spacing.xs */
+  --space-xs: 4px;
+  /* Extracted from Appearance.spacing.s */
+  --space-s: 8px;
+  /* Extracted from Appearance.spacing.m */
+  --space-m: 16px;
+  /* Extracted from Appearance.spacing.l */
+  --space-l: 24px;
+  /* Extracted from Appearance.spacing.xl */
+  --space-xl: 32px;
+  /* Extracted from Appearance.spacing.xxl */
+  --space-xxl: 48px;
+
+  /* ========================================
+   * Typography
+   * ======================================== */
+
+  /* Extracted from Appearance.font.family */
+  --font-base: Inter, system-ui, -apple-system, sans-serif;
+  /* Extracted from Appearance.font.monospace */
+  --font-monospace: JetBrains Mono, Consolas, monospace;
+  /* Same as base font family */
+  --font-heading: Inter, system-ui, -apple-system, sans-serif;
+
+  /* Extracted from Appearance.font.pixelSize.small */
+  --font-size-xs: 12px;
+  /* Extracted from Appearance.font.pixelSize.medium */
+  --font-size-s: 14px;
+  /* Extracted from Appearance.font.pixelSize.normal */
+  --font-size-m: 16px;
+  /* Extracted from Appearance.font.pixelSize.large */
+  --font-size-l: 18px;
+  /* Extracted from Appearance.font.pixelSize.larger */
+  --font-size-xl: 20px;
+  /* Extracted from Appearance.font.pixelSize.xl */
+  --font-size-xxl: 24px;
+  /* Extracted from Appearance.font.pixelSize.xxl */
+  --font-size-xxxl: 32px;
+
+  /* Extracted from Appearance.font.weight.normal */
+  --font-weight-normal: 400;
+  /* Extracted from Appearance.font.weight.medium */
+  --font-weight-medium: 500;
+  /* Extracted from Appearance.font.weight.semibold */
+  --font-weight-semibold: 600;
+  /* Extracted from Appearance.font.weight.bold */
+  --font-weight-bold: 700;
+
+  /* Tight line height for headings */
+  --line-height-tight: 1.2;
+  /* Normal line height for body text */
+  --line-height-normal: 1.5;
+  /* Relaxed line height for large text */
+  --line-height-relaxed: 1.75;
+
+  /* ========================================
+   * Elevation (Shadows)
+   * ======================================== */
+
+  /* Extracted from Appearance.elevation.none */
+  --shadow-none: none;
+  /* Extracted from Appearance.elevation.level2 */
+  --shadow-low: 0 2px 4px rgba(0,0,0,0.12);
+  /* Extracted from Appearance.elevation.level3 */
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.16);
+  /* Extracted from Appearance.elevation.level4 */
+  --shadow-high: 0 8px 16px rgba(0,0,0,0.20);
+
+  /* ========================================
+   * Border
+   * ======================================== */
+
+  /* Extracted from Appearance.rounding.none */
+  --radius-none: 0px;
+  /* Extracted from Appearance.rounding.small */
+  --radius-s: 4px;
+  /* Extracted from Appearance.rounding.normal */
+  --radius-m: 8px;
+  /* Extracted from Appearance.rounding.large */
+  --radius-l: 12px;
+  /* Extracted from Appearance.rounding.xl */
+  --radius-xl: 16px;
+  /* Extracted from Appearance.rounding.full */
+  --radius-full: 9999px;
+
+  /* Extracted from Appearance.borderWidth.thin */
+  --border-thin: 1px;
+  /* Extracted from Appearance.borderWidth.medium */
+  --border-medium: 2px;
+  /* Extracted from Appearance.borderWidth.thick */
+  --border-thick: 4px;
+
+  /* ========================================
+   * Animation
+   * ======================================== */
+
+  /* Extracted from Appearance.animation.durationFast */
+  --duration-fast: 150ms;
+  /* Extracted from Appearance.animation.durationNormal */
+  --duration-normal: 250ms;
+  /* Extracted from Appearance.animation.durationSlow */
+  --duration-slow: 400ms;
+
+  /* Extracted from Appearance.animation.easingStandard */
+  --easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  /* Extracted from Appearance.animation.easingDecelerate */
+  --easing-decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+  /* Extracted from Appearance.animation.easingAccelerate */
+  --easing-accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+
+}
+
+/* ========================================
+ * WebShell Utility Classes
+ * ======================================== */
+
+.ws-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-l);
+  padding: var(--space-m);
+  box-shadow: var(--shadow-low);
+}
+
+.ws-panel-high {
+  background: var(--color-surface-high);
+  border-radius: var(--radius-m);
+  padding: var(--space-s);
+  box-shadow: var(--shadow-medium);
+}

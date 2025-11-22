@@ -1,0 +1,88 @@
+{
+  "$schema": "https://webshell.dev/schemas/manifest/v1.json",
+  "version": "1.0.0",
+  "name": "mail",
+  "displayName": "Mail",
+  "description": "Modern email client with IMAP/SMTP support",
+  "author": "WebShell Team <team@webshell.dev>",
+  "license": "MIT",
+  "homepage": "https://github.com/webshell/mail-client",
+  "keywords": ["email", "mail", "imap", "smtp", "communication"],
+
+  "entrypoint": "index.html",
+  "icon": "assets/mail-icon.svg",
+
+  "permissions": {
+    "network": {
+      "allowed_hosts": [
+        "imap.gmail.com",
+        "smtp.gmail.com",
+        "outlook.office365.com",
+        "*.fastmail.com"
+      ],
+      "websockets": true
+    },
+    "filesystem": {
+      "read": ["~/.mail", "~/.config/mail-client"],
+      "write": ["~/.mail", "~/.config/mail-client"],
+      "watch": ["~/.mail/inbox"]
+    },
+    "notifications": {
+      "send": true
+    },
+    "clipboard": {
+      "read": true,
+      "write": true
+    },
+    "contacts": {
+      "read": true,
+      "write": false
+    }
+  },
+
+  "window": {
+    "type": "overlay",
+    "width": 1200,
+    "height": 800,
+    "minWidth": 800,
+    "minHeight": 600,
+    "resizable": true,
+    "blur": true,
+    "transparency": true,
+    "position": "center",
+    "title": "Mail"
+  },
+
+  "theme": {
+    "inherit": true,
+    "overrides": {
+      "--primary-color": "#0078d4",
+      "--sidebar-bg": "rgba(30, 30, 46, 0.9)"
+    }
+  },
+
+  "dependencies": {
+    "go_services": ["MailService", "AuthService"],
+    "qml_services": [],
+    "webshell_version": "1.0.0"
+  },
+
+  "hooks": {
+    "onStartup": "scripts/check-mail.js",
+    "onShutdown": "scripts/cleanup-cache.js",
+    "onResume": "scripts/sync-inbox.js"
+  },
+
+  "shortcuts": [
+    {
+      "key": "Ctrl+Alt+M",
+      "action": "toggle",
+      "description": "Toggle mail client visibility"
+    },
+    {
+      "key": "Ctrl+Shift+N",
+      "action": "open",
+      "description": "Open mail and compose new message"
+    }
+  ]
+}

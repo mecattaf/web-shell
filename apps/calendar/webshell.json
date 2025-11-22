@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "calendar",
+  "displayName": "Calendar",
+  "description": "Production calendar with event management and khal integration",
+  "entrypoint": "index.html",
+  "icon": "calendar.svg",
+
+  "permissions": {
+    "calendar": {
+      "read": true,
+      "write": true,
+      "delete": true
+    },
+    "notifications": {
+      "send": true
+    }
+  },
+
+  "window": {
+    "type": "widget",
+    "width": 1200,
+    "height": 800,
+    "minWidth": 800,
+    "minHeight": 600,
+    "blur": true,
+    "transparency": true,
+    "position": "center"
+  },
+
+  "devServer": "http://localhost:5173"
+}

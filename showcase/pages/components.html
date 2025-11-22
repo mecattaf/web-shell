@@ -1,0 +1,304 @@
+<div class="page-header">
+  <h1 class="ws-heading ws-heading--h1 page-title">Components</h1>
+  <p class="ws-text page-description">
+    Interactive UI components built with WebShell design tokens. All components are accessible and follow best practices.
+  </p>
+</div>
+
+<!-- Buttons -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Buttons</h2>
+    <p class="section-description">
+      Button components with different variants and sizes.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Button Variants</h3>
+    <div class="demo-preview">
+      <button class="ws-button ws-button--primary">Primary Button</button>
+      <button class="ws-button ws-button--secondary">Secondary Button</button>
+      <button class="ws-button ws-button--ghost">Ghost Button</button>
+      <button class="ws-button ws-button--primary" disabled>Disabled</button>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;button class="ws-button ws-button--primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="ws-button ws-button--secondary"&gt;Secondary Button&lt;/button&gt;
+&lt;button class="ws-button ws-button--ghost"&gt;Ghost Button&lt;/button&gt;
+&lt;button class="ws-button ws-button--primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Button Sizes</h3>
+    <div class="demo-preview">
+      <button class="ws-button ws-button--primary ws-button--small">Small</button>
+      <button class="ws-button ws-button--primary">Default</button>
+      <button class="ws-button ws-button--primary ws-button--large">Large</button>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;button class="ws-button ws-button--primary ws-button--small"&gt;Small&lt;/button&gt;
+&lt;button class="ws-button ws-button--primary"&gt;Default&lt;/button&gt;
+&lt;button class="ws-button ws-button--primary ws-button--large"&gt;Large&lt;/button&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Inputs -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Text Inputs</h2>
+    <p class="section-description">
+      Text input fields with labels and placeholder support.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Text Input</h3>
+    <div class="demo-preview">
+      <div class="ws-input-wrapper" style="width: 300px;">
+        <label class="ws-input-label">Email Address</label>
+        <input type="email" class="ws-input" placeholder="Enter your email">
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-input-wrapper"&gt;
+  &lt;label class="ws-input-label"&gt;Email Address&lt;/label&gt;
+  &lt;input type="email" class="ws-input" placeholder="Enter your email"&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Checkboxes -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Checkboxes</h2>
+    <p class="section-description">
+      Checkbox components for binary selections.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Checkbox Options</h3>
+    <div class="demo-preview">
+      <label class="ws-checkbox-wrapper">
+        <input type="checkbox" class="ws-checkbox" checked>
+        <span class="ws-checkbox-label">Checked option</span>
+      </label>
+      <label class="ws-checkbox-wrapper">
+        <input type="checkbox" class="ws-checkbox">
+        <span class="ws-checkbox-label">Unchecked option</span>
+      </label>
+      <label class="ws-checkbox-wrapper">
+        <input type="checkbox" class="ws-checkbox" disabled>
+        <span class="ws-checkbox-label">Disabled option</span>
+      </label>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;label class="ws-checkbox-wrapper"&gt;
+  &lt;input type="checkbox" class="ws-checkbox" checked&gt;
+  &lt;span class="ws-checkbox-label"&gt;Checked option&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Select -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Select Dropdowns</h2>
+    <p class="section-description">
+      Dropdown select components for choosing from options.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Select Menu</h3>
+    <div class="demo-preview">
+      <div class="ws-select-wrapper" style="width: 300px;">
+        <label class="ws-select-label">Choose an option</label>
+        <select class="ws-select">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-select-wrapper"&gt;
+  &lt;label class="ws-select-label"&gt;Choose an option&lt;/label&gt;
+  &lt;select class="ws-select"&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Typography -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Typography</h2>
+    <p class="section-description">
+      Text and heading components with different sizes and weights.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Headings</h3>
+    <div class="demo-preview" style="flex-direction: column; align-items: flex-start;">
+      <h1 class="ws-heading ws-heading--h1">Heading 1</h1>
+      <h2 class="ws-heading ws-heading--h2">Heading 2</h2>
+      <h3 class="ws-heading ws-heading--h3">Heading 3</h3>
+      <h4 class="ws-heading ws-heading--h4">Heading 4</h4>
+      <h5 class="ws-heading ws-heading--h5">Heading 5</h5>
+      <h6 class="ws-heading ws-heading--h6">Heading 6</h6>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;h1 class="ws-heading ws-heading--h1"&gt;Heading 1&lt;/h1&gt;
+&lt;h2 class="ws-heading ws-heading--h2"&gt;Heading 2&lt;/h2&gt;
+&lt;h3 class="ws-heading ws-heading--h3"&gt;Heading 3&lt;/h3&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Text Variants</h3>
+    <div class="demo-preview" style="flex-direction: column; align-items: flex-start;">
+      <p class="ws-text ws-text--size-l">Large text</p>
+      <p class="ws-text ws-text--size-m">Medium text (default)</p>
+      <p class="ws-text ws-text--size-s">Small text</p>
+      <p class="ws-text ws-text--secondary">Secondary text</p>
+      <p class="ws-text ws-text--monospace">Monospace text</p>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;p class="ws-text ws-text--size-l"&gt;Large text&lt;/p&gt;
+&lt;p class="ws-text ws-text--secondary"&gt;Secondary text&lt;/p&gt;
+&lt;p class="ws-text ws-text--monospace"&gt;Monospace text&lt;/p&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Cards -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Cards</h2>
+    <p class="section-description">
+      Card components for grouping related content.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Card Examples</h3>
+    <div class="demo-preview">
+      <div class="ws-card" style="width: 300px;">
+        <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Card Title</h3>
+        <p class="ws-text ws-text--size-s ws-text--secondary">This is a card component with some content inside.</p>
+      </div>
+      <div class="ws-card ws-card--interactive" style="width: 300px;">
+        <h3 class="ws-heading ws-heading--h4" style="margin-bottom: 8px;">Interactive Card</h3>
+        <p class="ws-text ws-text--size-s ws-text--secondary">Hover over this card to see the interactive effect.</p>
+      </div>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;div class="ws-card"&gt;
+  &lt;h3 class="ws-heading ws-heading--h4"&gt;Card Title&lt;/h3&gt;
+  &lt;p class="ws-text ws-text--size-s"&gt;Card content&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Lists -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Lists</h2>
+    <p class="section-description">
+      List components for displaying items.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">List Example</h3>
+    <div class="demo-preview">
+      <ul class="ws-list" style="width: 300px; background: var(--color-surface); border-radius: var(--radius-m);">
+        <li class="ws-list-item ws-list-item--interactive">List item 1</li>
+        <li class="ws-list-item ws-list-item--interactive">List item 2</li>
+        <li class="ws-list-item ws-list-item--interactive">List item 3</li>
+        <li class="ws-list-item ws-list-item--interactive">List item 4</li>
+      </ul>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;ul class="ws-list"&gt;
+  &lt;li class="ws-list-item ws-list-item--interactive"&gt;List item 1&lt;/li&gt;
+  &lt;li class="ws-list-item ws-list-item--interactive"&gt;List item 2&lt;/li&gt;
+  &lt;li class="ws-list-item ws-list-item--interactive"&gt;List item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="ws-heading ws-heading--h2 section-title">Dividers</h2>
+    <p class="section-description">
+      Divider components for separating content.
+    </p>
+  </div>
+
+  <div class="demo-container">
+    <h3 class="ws-heading ws-heading--h4">Divider Examples</h3>
+    <div class="demo-preview" style="flex-direction: column; width: 100%;">
+      <p class="ws-text">Content above</p>
+      <hr class="ws-divider">
+      <p class="ws-text">Content below</p>
+    </div>
+    <div class="demo-code">
+      <div class="demo-code-header">
+        <span class="demo-code-title">HTML</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+      <pre><code>&lt;hr class="ws-divider"&gt;</code></pre>
+    </div>
+  </div>
+</section>

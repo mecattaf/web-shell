@@ -1,0 +1,537 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://webshell.dev/schemas/manifest/v1.json",
+  "title": "WebShell Manifest",
+  "description": "Schema for WebShell application manifests (webshell.json)",
+  "type": "object",
+  "required": ["version", "name", "entrypoint"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Reference to this schema file for validation"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the application",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.-]+)?(\\+[a-zA-Z0-9.-]+)?$",
+      "examples": ["1.0.0", "2.1.3-beta.1", "1.0.0+20250119"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Unique identifier for the application (lowercase, alphanumeric, hyphens only)",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 1,
+      "maxLength": 64,
+      "examples": ["calendar", "email-client", "system-monitor"]
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Human-readable display name",
+      "minLength": 1,
+      "maxLength": 128,
+      "examples": ["Calendar", "Email Client", "System Monitor"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the application",
+      "maxLength": 500,
+      "examples": ["Weekly calendar view with event management"]
+    },
+    "author": {
+      "type": "string",
+      "description": "Author name and/or email",
+      "maxLength": 256,
+      "examples": ["John Doe", "WebShell Team <team@webshell.dev>"]
+    },
+    "license": {
+      "type": "string",
+      "description": "SPDX license identifier",
+      "examples": ["MIT", "Apache-2.0", "GPL-3.0", "BSD-3-Clause"]
+    },
+    "homepage": {
+      "type": "string",
+      "description": "Project homepage URL",
+      "format": "uri",
+      "examples": ["https://github.com/user/calendar-app"]
+    },
+    "repository": {
+      "type": "string",
+      "description": "Source code repository URL",
+      "format": "uri",
+      "examples": ["https://github.com/user/calendar-app.git"]
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Keywords for searching and categorization",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      },
+      "maxItems": 10,
+      "uniqueItems": true,
+      "examples": [["calendar", "productivity", "scheduling"]]
+    },
+    "entrypoint": {
+      "type": "string",
+      "description": "Path to the main HTML file (relative to manifest)",
+      "pattern": "^[^/].*\\.html?$",
+      "examples": ["index.html", "dist/index.html"]
+    },
+    "icon": {
+      "type": "string",
+      "description": "Path to application icon (SVG, PNG, or ICO)",
+      "pattern": "^[^/].*\\.(svg|png|ico)$",
+      "examples": ["icon.svg", "assets/icon.png"]
+    },
+    "devServer": {
+      "type": "string",
+      "description": "Development server URL for hot reload",
+      "format": "uri",
+      "pattern": "^https?://(localhost|127\\.0\\.0\\.1)(:\\d+)?",
+      "examples": ["http://localhost:5173", "http://127.0.0.1:3000"]
+    },
+    "devMode": {
+      "type": "object",
+      "description": "Development mode configuration",
+      "properties": {
+        "hotReload": {
+          "type": "boolean",
+          "description": "Enable automatic reload on file changes",
+          "default": true
+        },
+        "watchPaths": {
+          "type": "array",
+          "description": "Glob patterns for files to watch",
+          "items": {
+            "type": "string"
+          },
+          "default": ["src/**/*"],
+          "examples": [["src/**/*", "public/**/*", "index.html"]]
+        },
+        "ignorePaths": {
+          "type": "array",
+          "description": "Glob patterns for files to ignore",
+          "items": {
+            "type": "string"
+          },
+          "default": ["node_modules/**", "dist/**"],
+          "examples": [["node_modules/**", "dist/**", ".git/**"]]
+        }
+      },
+      "additionalProperties": false
+    },
+    "permissions": {
+      "type": "object",
+      "description": "Requested permissions (default-deny security model)",
+      "properties": {
+        "calendar": {
+          "type": "object",
+          "description": "Calendar data access permissions",
+          "properties": {
+            "read": {
+              "type": "boolean",
+              "description": "Read calendar events",
+              "default": false
+            },
+            "write": {
+              "type": "boolean",
+              "description": "Create and modify calendar events",
+              "default": false
+            },
+            "delete": {
+              "type": "boolean",
+              "description": "Delete calendar events",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "contacts": {
+          "type": "object",
+          "description": "Contacts data access permissions",
+          "properties": {
+            "read": {
+              "type": "boolean",
+              "description": "Read contact information",
+              "default": false
+            },
+            "write": {
+              "type": "boolean",
+              "description": "Create and modify contacts",
+              "default": false
+            },
+            "delete": {
+              "type": "boolean",
+              "description": "Delete contacts",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "filesystem": {
+          "type": "object",
+          "description": "File system access permissions",
+          "properties": {
+            "read": {
+              "type": "array",
+              "description": "Paths allowed for reading (supports ~ and globs)",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "examples": [["~/.mail", "/tmp/app-cache"]]
+            },
+            "write": {
+              "type": "array",
+              "description": "Paths allowed for writing (supports ~ and globs)",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "examples": [["~/.config/myapp"]]
+            },
+            "watch": {
+              "type": "array",
+              "description": "Paths to watch for changes",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "examples": [["~/Documents"]]
+            }
+          },
+          "additionalProperties": false
+        },
+        "network": {
+          "type": "object",
+          "description": "Network access permissions",
+          "properties": {
+            "allowed_hosts": {
+              "type": "array",
+              "description": "Allowed network hosts/domains",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "examples": [["localhost", "api.example.com", "*.github.com"]]
+            },
+            "websockets": {
+              "type": "boolean",
+              "description": "Allow WebSocket connections",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "notifications": {
+          "type": "object",
+          "description": "System notifications permissions",
+          "properties": {
+            "send": {
+              "type": "boolean",
+              "description": "Send system notifications",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "clipboard": {
+          "type": "object",
+          "description": "Clipboard access permissions",
+          "properties": {
+            "read": {
+              "type": "boolean",
+              "description": "Read from clipboard",
+              "default": false
+            },
+            "write": {
+              "type": "boolean",
+              "description": "Write to clipboard",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "processes": {
+          "type": "object",
+          "description": "Process management permissions",
+          "properties": {
+            "spawn": {
+              "type": "boolean",
+              "description": "Spawn new system processes",
+              "default": false
+            },
+            "allowed_commands": {
+              "type": "array",
+              "description": "Whitelist of allowed commands (if spawn is true)",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "examples": [["git", "npm", "ls"]]
+            }
+          },
+          "additionalProperties": false
+        },
+        "system": {
+          "type": "object",
+          "description": "System-level permissions",
+          "properties": {
+            "power": {
+              "type": "boolean",
+              "description": "Control power management (shutdown, suspend, etc.)",
+              "default": false
+            },
+            "audio": {
+              "type": "boolean",
+              "description": "Access audio input/output",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "api": {
+          "type": "array",
+          "description": "Legacy simple API permissions (deprecated in favor of specific permissions)",
+          "items": {
+            "type": "string",
+            "enum": ["clipboard", "notifications", "filesystem", "network", "process"]
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "window": {
+      "type": "object",
+      "description": "Window configuration and appearance",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Window type/behavior",
+          "enum": ["widget", "panel", "overlay", "dialog"],
+          "default": "widget"
+        },
+        "width": {
+          "type": "integer",
+          "description": "Initial window width in pixels",
+          "minimum": 100,
+          "maximum": 7680,
+          "default": 1280
+        },
+        "height": {
+          "type": "integer",
+          "description": "Initial window height in pixels",
+          "minimum": 100,
+          "maximum": 4320,
+          "default": 720
+        },
+        "minWidth": {
+          "type": "integer",
+          "description": "Minimum window width in pixels",
+          "minimum": 100,
+          "maximum": 7680
+        },
+        "minHeight": {
+          "type": "integer",
+          "description": "Minimum window height in pixels",
+          "minimum": 100,
+          "maximum": 4320
+        },
+        "maxWidth": {
+          "type": "integer",
+          "description": "Maximum window width in pixels",
+          "minimum": 100,
+          "maximum": 7680
+        },
+        "maxHeight": {
+          "type": "integer",
+          "description": "Maximum window height in pixels",
+          "minimum": 100,
+          "maximum": 4320
+        },
+        "title": {
+          "type": "string",
+          "description": "Window title bar text (defaults to displayName or name)",
+          "maxLength": 256
+        },
+        "resizable": {
+          "type": "boolean",
+          "description": "Whether the window can be resized",
+          "default": true
+        },
+        "blur": {
+          "type": "boolean",
+          "description": "Enable background blur effect (requires compositor)",
+          "default": false
+        },
+        "transparency": {
+          "type": "boolean",
+          "description": "Enable transparent background (requires compositor)",
+          "default": false
+        },
+        "transparent": {
+          "type": "boolean",
+          "description": "Alias for transparency (deprecated)",
+          "default": false
+        },
+        "position": {
+          "type": "string",
+          "description": "Initial window position on screen",
+          "enum": ["center", "top-left", "top-right", "bottom-left", "bottom-right"],
+          "default": "center"
+        },
+        "margins": {
+          "type": "object",
+          "description": "Window margins from screen edges (for panels)",
+          "properties": {
+            "top": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "right": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "bottom": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            },
+            "left": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "alwaysOnTop": {
+          "type": "boolean",
+          "description": "Keep window above other windows",
+          "default": false
+        },
+        "showInTaskbar": {
+          "type": "boolean",
+          "description": "Show window in taskbar",
+          "default": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "theme": {
+      "type": "object",
+      "description": "Theme and styling configuration",
+      "properties": {
+        "inherit": {
+          "type": "boolean",
+          "description": "Inherit system theme (colors, fonts, etc.)",
+          "default": true
+        },
+        "overrides": {
+          "type": "object",
+          "description": "CSS variable overrides for theme customization",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "examples": [
+            {
+              "--primary-color": "#3b82f6",
+              "--background-color": "#1e1e2e"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "dependencies": {
+      "type": "object",
+      "description": "External service dependencies",
+      "properties": {
+        "go_services": {
+          "type": "array",
+          "description": "Required Go backend services",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "examples": [["CalendarService", "AuthService"]]
+        },
+        "qml_services": {
+          "type": "array",
+          "description": "Required QML/QuickShell services",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "examples": [["WindowManager", "ThemeProvider"]]
+        },
+        "webshell_version": {
+          "type": "string",
+          "description": "Minimum required WebShell version",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "examples": ["1.0.0"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "hooks": {
+      "type": "object",
+      "description": "Lifecycle hooks (scripts to run at specific events)",
+      "properties": {
+        "onStartup": {
+          "type": "string",
+          "description": "Script to run when app starts",
+          "examples": ["startup.js", "scripts/init.js"]
+        },
+        "onShutdown": {
+          "type": "string",
+          "description": "Script to run when app closes",
+          "examples": ["cleanup.js", "scripts/cleanup.js"]
+        },
+        "onSuspend": {
+          "type": "string",
+          "description": "Script to run when system suspends",
+          "examples": ["suspend.js"]
+        },
+        "onResume": {
+          "type": "string",
+          "description": "Script to run when system resumes",
+          "examples": ["resume.js"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "shortcuts": {
+      "type": "array",
+      "description": "Global keyboard shortcuts",
+      "items": {
+        "type": "object",
+        "required": ["key", "action"],
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Keyboard shortcut (platform-agnostic format)",
+            "examples": ["Ctrl+Alt+C", "Super+T", "Shift+F1"]
+          },
+          "action": {
+            "type": "string",
+            "description": "Action to perform",
+            "enum": ["open", "close", "toggle", "minimize", "maximize", "focus"]
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the shortcut",
+            "maxLength": 128
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

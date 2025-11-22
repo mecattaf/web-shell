@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "name": "note-taker",
+  "displayName": "Note Taker",
+  "description": "Simple CRUD app with local storage and markdown preview",
+  "entrypoint": "index.html",
+  "icon": "icon.svg",
+
+  "permissions": {
+    "ipc": {
+      "invoke": true
+    }
+  },
+
+  "window": {
+    "type": "normal",
+    "width": 1000,
+    "height": 700,
+    "minWidth": 800,
+    "minHeight": 500,
+    "blur": false,
+    "transparency": false,
+    "position": "center"
+  },
+
+  "devServer": "http://localhost:5173"
+}

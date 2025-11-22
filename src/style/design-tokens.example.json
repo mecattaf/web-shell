@@ -1,0 +1,304 @@
+{
+  "$schema": "./design-tokens.schema.json",
+  "version": "1.0.0",
+  "colors": {
+    "surface": {
+      "value": "#1a1a1a",
+      "description": "Default surface background color for the terminal"
+    },
+    "surface-high": {
+      "value": "#2a2a2a",
+      "description": "Elevated surface color for panels, cards, and floating elements"
+    },
+    "surface-highest": {
+      "value": "#3a3a3a",
+      "description": "Highest elevation surface for dialogs, tooltips, and modals"
+    },
+    "surface-low": {
+      "value": "#0f0f0f",
+      "description": "Lower surface color for recessed areas and input backgrounds"
+    },
+    "primary": {
+      "value": "#60a5fa",
+      "description": "Primary brand color for key actions, links, and highlights"
+    },
+    "primary-hover": {
+      "value": "#93c5fd",
+      "description": "Primary color hover state for interactive elements"
+    },
+    "primary-active": {
+      "value": "#3b82f6",
+      "description": "Primary color active/pressed state"
+    },
+    "on-primary": {
+      "value": "#000000",
+      "description": "Text and icon color to use on primary background"
+    },
+    "secondary": {
+      "value": "#a78bfa",
+      "description": "Secondary accent color for less prominent actions"
+    },
+    "secondary-hover": {
+      "value": "#c4b5fd",
+      "description": "Secondary color hover state"
+    },
+    "secondary-active": {
+      "value": "#8b5cf6",
+      "description": "Secondary color active/pressed state"
+    },
+    "on-secondary": {
+      "value": "#000000",
+      "description": "Text and icon color to use on secondary background"
+    },
+    "text": {
+      "value": "#e5e5e5",
+      "description": "Default text color for primary content"
+    },
+    "text-secondary": {
+      "value": "#a3a3a3",
+      "description": "Secondary/muted text color for less important content"
+    },
+    "text-disabled": {
+      "value": "#525252",
+      "description": "Disabled text color for inactive elements"
+    },
+    "text-inverse": {
+      "value": "#1a1a1a",
+      "description": "Inverse text color for use on light backgrounds"
+    },
+    "border": {
+      "value": "#404040",
+      "description": "Default border color for separators and outlines"
+    },
+    "border-focus": {
+      "value": "#60a5fa",
+      "description": "Border color for focused elements (uses primary color)"
+    },
+    "border-hover": {
+      "value": "#525252",
+      "description": "Border color on hover state"
+    },
+    "error": {
+      "value": "#f87171",
+      "description": "Error state color for validation and alerts"
+    },
+    "on-error": {
+      "value": "#000000",
+      "description": "Text and icon color to use on error background"
+    },
+    "warning": {
+      "value": "#fbbf24",
+      "description": "Warning state color for cautions and important notices"
+    },
+    "on-warning": {
+      "value": "#000000",
+      "description": "Text and icon color to use on warning background"
+    },
+    "success": {
+      "value": "#34d399",
+      "description": "Success state color for confirmations and positive feedback"
+    },
+    "on-success": {
+      "value": "#000000",
+      "description": "Text and icon color to use on success background"
+    },
+    "info": {
+      "value": "#60a5fa",
+      "description": "Info state color for informational messages"
+    },
+    "on-info": {
+      "value": "#000000",
+      "description": "Text and icon color to use on info background"
+    }
+  },
+  "spacing": {
+    "xs": {
+      "value": "4px",
+      "description": "Extra small spacing for tight layouts and minimal gaps"
+    },
+    "s": {
+      "value": "8px",
+      "description": "Small spacing for compact components and close relationships"
+    },
+    "m": {
+      "value": "16px",
+      "description": "Medium spacing - the base unit for most layouts"
+    },
+    "l": {
+      "value": "24px",
+      "description": "Large spacing for section separation and breathing room"
+    },
+    "xl": {
+      "value": "32px",
+      "description": "Extra large spacing for major section breaks"
+    },
+    "xxl": {
+      "value": "48px",
+      "description": "Extra extra large spacing for page-level separation"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "base": {
+        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "description": "Base font family for general UI text"
+      },
+      "heading": {
+        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "description": "Font family for headings and titles"
+      },
+      "monospace": {
+        "value": "'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace",
+        "description": "Monospace font family for terminal output and code"
+      }
+    },
+    "fontSize": {
+      "xs": {
+        "value": "12px",
+        "description": "Extra small font size for captions and fine print"
+      },
+      "s": {
+        "value": "14px",
+        "description": "Small font size for secondary text and labels"
+      },
+      "m": {
+        "value": "16px",
+        "description": "Medium/base font size for body text"
+      },
+      "l": {
+        "value": "18px",
+        "description": "Large font size for emphasized text"
+      },
+      "xl": {
+        "value": "20px",
+        "description": "Extra large font size for subheadings"
+      },
+      "xxl": {
+        "value": "24px",
+        "description": "Extra extra large font size for section headings"
+      },
+      "xxxl": {
+        "value": "32px",
+        "description": "Extra extra extra large font size for page titles"
+      }
+    },
+    "fontWeight": {
+      "normal": {
+        "value": 400,
+        "description": "Normal font weight for body text"
+      },
+      "medium": {
+        "value": 500,
+        "description": "Medium font weight for subtle emphasis"
+      },
+      "semibold": {
+        "value": 600,
+        "description": "Semibold font weight for strong emphasis"
+      },
+      "bold": {
+        "value": 700,
+        "description": "Bold font weight for headings and important text"
+      }
+    },
+    "lineHeight": {
+      "tight": {
+        "value": 1.2,
+        "description": "Tight line height for headings and dense layouts"
+      },
+      "normal": {
+        "value": 1.5,
+        "description": "Normal line height for body text and readable content"
+      },
+      "relaxed": {
+        "value": 1.75,
+        "description": "Relaxed line height for improved readability in long text"
+      }
+    }
+  },
+  "elevation": {
+    "none": {
+      "value": "none",
+      "description": "No shadow - flat surface at base level"
+    },
+    "low": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.3)",
+      "description": "Low elevation for subtle depth (buttons, inputs)"
+    },
+    "medium": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)",
+      "description": "Medium elevation for floating elements (cards, dropdowns)"
+    },
+    "high": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3)",
+      "description": "High elevation for prominent overlays (dialogs, modals)"
+    }
+  },
+  "border": {
+    "radius": {
+      "none": {
+        "value": "0px",
+        "description": "No border radius - sharp corners for terminals and code blocks"
+      },
+      "s": {
+        "value": "4px",
+        "description": "Small border radius for subtle rounding"
+      },
+      "m": {
+        "value": "8px",
+        "description": "Medium border radius for buttons and inputs"
+      },
+      "l": {
+        "value": "12px",
+        "description": "Large border radius for cards and panels"
+      },
+      "full": {
+        "value": "9999px",
+        "description": "Full border radius for circular elements (avatars, badges)"
+      }
+    },
+    "width": {
+      "thin": {
+        "value": "1px",
+        "description": "Thin border for subtle outlines and separators"
+      },
+      "medium": {
+        "value": "2px",
+        "description": "Medium border for emphasis and focus states"
+      },
+      "thick": {
+        "value": "4px",
+        "description": "Thick border for strong visual separation"
+      }
+    }
+  },
+  "animation": {
+    "duration": {
+      "fast": {
+        "value": "150ms",
+        "description": "Fast animation for subtle interactions (hover, focus)"
+      },
+      "normal": {
+        "value": "250ms",
+        "description": "Normal animation for most transitions and state changes"
+      },
+      "slow": {
+        "value": "400ms",
+        "description": "Slow animation for complex transitions and reveals"
+      }
+    },
+    "easing": {
+      "standard": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "description": "Standard easing for smooth, natural motion"
+      },
+      "decelerate": {
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "description": "Deceleration easing for elements entering the view"
+      },
+      "accelerate": {
+        "value": "cubic-bezier(0.4, 0, 1, 1)",
+        "description": "Acceleration easing for elements exiting the view"
+      }
+    }
+  }
+}

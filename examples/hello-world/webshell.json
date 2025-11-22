@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "name": "hello-world",
+  "displayName": "Hello World",
+  "description": "Minimal WebShell example app",
+  "entrypoint": "index.html",
+  "icon": "icon.svg",
+
+  "permissions": {
+    "notifications": {
+      "send": true
+    }
+  },
+
+  "window": {
+    "type": "widget",
+    "width": 400,
+    "height": 300,
+    "blur": false,
+    "transparency": false,
+    "position": "center"
+  }
+}

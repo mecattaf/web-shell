@@ -1,0 +1,60 @@
+{
+  "name": "web-shell",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/sdk/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:types": "tsc --project tsconfig.sdk.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "prettify": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "tokens:generate": "node tools/generate-css-vars.js",
+    "tokens:validate": "node tools/webshell-tokens.js validate",
+    "tokens:cli": "node tools/webshell-tokens.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/readex-pro": "^5.2.6",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "@gsap/react": "^2.1.2",
+    "@tailwindcss/vite": "^4.1.3",
+    "lucide-react": "^0.487.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.17",
+    "tailwindcss": "^4.1.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^4.0.10",
+    "ajv-cli": "^5.0.0",
+    "ajv-formats": "^3.0.1",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "happy-dom": "^20.0.10",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vitest": "^4.0.10"
+  }
+}
