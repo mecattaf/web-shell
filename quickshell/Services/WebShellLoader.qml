@@ -5,7 +5,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import Quickshell
 import Quickshell.Io
-import WebShell.Services
+import qs.Services
 
 QtObject {
     id: root

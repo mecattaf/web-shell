@@ -1,9 +1,0 @@
-module qs.Components
-singleton WebShellProfile 1.0 WebShellProfile.qml
-DevServerChecker 1.0 DevServerChecker.qml
-WebShellView 1.0 WebShellView.qml
-WebShellContainer 1.0 WebShellContainer.qml
-ThemeLoader 1.0 ThemeLoader.qml
-ThemedWebShellView 1.0 ThemedWebShellView.qml
-PermissionPromptDialog 1.0 PermissionPromptDialog.qml
-AppSwitcher 1.0 AppSwitcher.qml

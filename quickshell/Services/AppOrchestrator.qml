@@ -3,7 +3,7 @@
 pragma Singleton
 pragma ComponentBehavior: Bound
 import QtQuick
-import WebShell.Services
+import qs.Services
 
 /**
  * AppOrchestrator - Manages multiple WebShell apps running simultaneously

@@ -1,6 +1,6 @@
 pragma ComponentBehavior: Bound
 import QtQuick
-import WebShell.Services
+import qs.Services
 
 /**
  * DockContainer - Application launcher dock

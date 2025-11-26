@@ -1,5 +1,5 @@
 import QtQuick
-import WebShell.Services
+import qs.Services
 
 QtObject {
     id: root

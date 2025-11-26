@@ -1,7 +1,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Effects
-import WebShell.Services
+import qs.Services
 
 /**
  * ShellContainer - Base container for WebShell structural layout

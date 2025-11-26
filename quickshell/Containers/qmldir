@@ -1,9 +1,0 @@
-module qs.Containers
-singleton WebShellContainerRegistry 1.0 WebShellContainerRegistry.qml
-singleton FocusManager 1.0 FocusManager.qml
-ShellContainer 1.0 ShellContainer.qml
-PanelContainer 1.0 PanelContainer.qml
-OverlayContainer 1.0 OverlayContainer.qml
-WidgetContainer 1.0 WidgetContainer.qml
-DockContainer 1.0 DockContainer.qml
-NotificationAreaContainer 1.0 NotificationAreaContainer.qml

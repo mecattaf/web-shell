@@ -3,7 +3,7 @@
 pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.LocalStorage
-import WebShell.Services
+import qs.Services
 
 QtObject {
     id: root
