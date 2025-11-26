@@ -1,4 +1,4 @@
-module WebShell.Services
+module qs.Services
 singleton WebShellService 1.0 WebShellService.qml
 singleton BridgeService 1.0 BridgeService.qml
 singleton DevModeManager 1.0 DevModeManager.qml
