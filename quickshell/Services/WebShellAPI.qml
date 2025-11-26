@@ -1,5 +1,5 @@
 import QtQuick
-import WebShell.Services
+import qs.Services
 
 /**
  * WebShell API - Provides permission-controlled access to system resources

@@ -5,7 +5,7 @@ import QtQuick
 import QtQuick.Controls
 import QtWebEngine
 import QtWebChannel
-import WebShell.Services
+import qs.Services
 
 Item {
     id: root

@@ -2,7 +2,7 @@
 // Tests app discovery, loading, and lifecycle management
 import QtQuick
 import Quickshell
-import WebShell.Services
+import qs.Services
 
 PanelWindow {
     id: testWindow

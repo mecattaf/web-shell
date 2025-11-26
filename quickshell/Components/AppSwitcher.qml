@@ -3,7 +3,7 @@
 import QtQuick
 import QtQuick.Layouts
 import Quickshell
-import WebShell.Services
+import qs.Services
 
 /**
  * AppSwitcher - Visual overlay for switching between running apps

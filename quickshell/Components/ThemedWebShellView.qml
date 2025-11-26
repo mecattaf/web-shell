@@ -2,7 +2,7 @@
 // Listens to WebShellTheme changes and pushes updates to the WebView
 pragma ComponentBehavior: Bound
 import QtQuick
-import WebShell.Services
+import qs.Services
 
 WebShellView {
     id: themedView

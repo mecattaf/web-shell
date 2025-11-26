@@ -4,7 +4,7 @@ import QtQuick.Controls
 import QtWebEngine
 import Quickshell
 
-import qs.Components 1.0
+import qs.Components
 
 Scope {
     id: root

@@ -1,6 +1,6 @@
 import QtQuick
 import QtTest
-import WebShell.Services
+import qs.Services
 
 TestCase {
     name: "ManifestParser"

@@ -1,6 +1,6 @@
 import QtQuick
 import QtTest
-import WebShell.Services
+import qs.Services
 
 /**
  * Test suite for the Permission System
@@ -258,7 +258,7 @@ TestCase {
         });
 
         const enforcer = Qt.createQmlObject(
-            'import QtQuick; import WebShell.Services; PermissionEnforcer { appName: "test-app" }',
+            'import QtQuick; import qs.Services; PermissionEnforcer { appName: "test-app" }',
             this
         );
 
@@ -280,7 +280,7 @@ TestCase {
         });
 
         const enforcer = Qt.createQmlObject(
-            'import QtQuick; import WebShell.Services; PermissionEnforcer { appName: "test-app" }',
+            'import QtQuick; import qs.Services; PermissionEnforcer { appName: "test-app" }',
             this
         );
 
@@ -302,7 +302,7 @@ TestCase {
         });
 
         const enforcer = Qt.createQmlObject(
-            'import QtQuick; import WebShell.Services; PermissionEnforcer { appName: "test-app" }',
+            'import QtQuick; import qs.Services; PermissionEnforcer { appName: "test-app" }',
             this
         );
 
