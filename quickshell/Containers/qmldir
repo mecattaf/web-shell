@@ -1,4 +1,4 @@
-module WebShell.Containers
+module qs.Containers
 singleton WebShellContainerRegistry 1.0 WebShellContainerRegistry.qml
 singleton FocusManager 1.0 FocusManager.qml
 ShellContainer 1.0 ShellContainer.qml
