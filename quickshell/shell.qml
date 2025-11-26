@@ -1,13 +1,13 @@
-
 import QtQuick
 import Quickshell
-
-import qs 1.0     // ← your root module
 
 ShellRoot {
     id: root
 
-    qs.WebShell {  // ← must be prefixed
-        id: webshell
+    // Load WebShell component as a file (no module needed)
+    Loader {
+        id: webshellLoader
+        asynchronous: false
+        source: "WebShell.qml"
     }
 }

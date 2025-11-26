@@ -1,6 +1,0 @@
-module qs
-
-WebShell 1.0 WebShell.qml
-subdir Components
-subdir Containers
-subdir Services

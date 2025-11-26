@@ -4,7 +4,6 @@ import QtQuick.Controls
 import QtWebEngine
 import Quickshell
 
-import qs 1.0
 import qs.Components 1.0
 
 Scope {
