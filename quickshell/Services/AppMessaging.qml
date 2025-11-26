@@ -220,11 +220,11 @@ QtObject {
         };
 
         // Send the request
-        sendMessage(fromApp, toApp, requestType, {
-            ...data,
+        const requestData = Object.assign({}, data, {
             requestId: requestId,
             expectsResponse: true
         });
+        sendMessage(fromApp, toApp, requestType, requestData);
 
         timer.start();
 
@@ -241,10 +241,10 @@ QtObject {
     function sendResponse(toApp, requestType, requestId, responseData) {
         console.log(`[AppMessaging] Sending response for request ${requestId}`);
 
-        sendMessage("system", toApp, `${requestType}:response`, {
-            requestId: requestId,
-            ...responseData
-        });
+        const response = Object.assign({}, {
+            requestId: requestId
+        }, responseData);
+        sendMessage("system", toApp, `${requestType}:response`, response);
     }
 
     /**

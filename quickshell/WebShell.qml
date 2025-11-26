@@ -7,28 +7,32 @@ import Quickshell.Wayland
 
 import qs.Components
 
-Scope {
-    id: root
+// WebShell windows - manages web-based shell components
+PanelWindow {
+    id: window
 
-    // Initialize QtWebEngine (must be done before creating WebEngineView)
+    title: "Web Shell"
+    width: 1280
+    height: 720
+    visible: true
+
+    color: "#1e1e1e"
+    
+    // Panel-specific properties (adjust as needed)
+    anchors {
+        top: true
+        left: true
+        right: true
+        bottom: true
+    }
+
     Component.onCompleted: {
         QtWebEngine.initialize();
         console.log("[WebShell] QtWebEngine initialized");
     }
 
-    ShellWindow {
-        id: window
-
-        title: "Web Shell"
-        width: 1280
-        height: 720
-        visible: true
-
-        color: "#1e1e1e"
-
-        WebShellContainer {
-            id: container
-            anchors.fill: parent
-        }
+    WebShellContainer {
+        id: container
+        anchors.fill: parent
     }
 }
