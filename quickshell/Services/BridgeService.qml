@@ -4,9 +4,12 @@
 pragma Singleton
 pragma ComponentBehavior: Bound
 import QtQuick
+import QtWebChannel
 
 QtObject {
     id: root
+
+    WebChannel.id: "bridge"
 
     // Signals for QML -> JS communication (forwarded from Go backend)
     signal notifyJS(string message)
