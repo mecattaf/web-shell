@@ -3,6 +3,7 @@ import QtQuick
 import QtQuick.Controls
 import QtWebEngine
 import Quickshell
+import Quickshell.Wayland
 
 import qs.Components
 
