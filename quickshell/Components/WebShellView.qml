@@ -96,9 +96,7 @@ Item {
         // QtWebChannel bridge for JS<->QML communication
         webChannel: WebChannel {
             id: channel
-            registeredObjects: ({
-                "bridge": BridgeService
-            })
+            registeredObjects: [BridgeService]
         }
 
         // Transparent background (required for compositor blur)
